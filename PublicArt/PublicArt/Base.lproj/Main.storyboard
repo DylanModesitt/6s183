@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ayV-hS-gYt">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Public Art @ MIT-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PublicArt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="229-LP-kyh">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="229-LP-kyh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HDc-Rf-5lM"/>
+                            <constraint firstItem="229-LP-kyh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hA8-21-Qrc"/>
+                            <constraint firstItem="229-LP-kyh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="na1-GI-jbf"/>
+                            <constraint firstItem="229-LP-kyh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="yOJ-nw-I1I"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Public Art @ MIT" id="NpJ-wr-FrN"/>
+                    <connections>
+                        <outlet property="mapView" destination="229-LP-kyh" id="fRh-D9-b4P"/>
+                        <segue destination="3JR-Np-d7D" kind="show" identifier="moreDetail" id="hxC-aT-jlc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="479.19999999999999" y="132.26600985221674"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="Kep-3n-l29">
+            <objects>
+                <viewController id="3JR-Np-d7D" customClass="DetailViewController" customModule="PublicArt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ogg-F2-kvw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ITt-og-jri">
+                                <rect key="frame" x="0.0" y="88" width="375" height="406"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artwork Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVg-eI-HAG">
+                                <rect key="frame" x="16" y="514" width="343" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="axQ-W6-Pa8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uay-uy-CWo">
+                                <rect key="frame" x="16" y="602" width="343" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Uay-uy-CWo" firstAttribute="top" secondItem="iVg-eI-HAG" secondAttribute="bottom" constant="8" id="2z4-Cj-gRv"/>
+                            <constraint firstItem="Uay-uy-CWo" firstAttribute="leading" secondItem="fYu-nz-JKv" secondAttribute="leading" constant="16" id="TfH-wg-jMo"/>
+                            <constraint firstItem="fYu-nz-JKv" firstAttribute="trailing" secondItem="Uay-uy-CWo" secondAttribute="trailing" constant="16" id="Yz4-5d-qlB"/>
+                            <constraint firstItem="ITt-og-jri" firstAttribute="leading" secondItem="fYu-nz-JKv" secondAttribute="leading" id="d87-y8-mEH"/>
+                            <constraint firstItem="ITt-og-jri" firstAttribute="trailing" secondItem="fYu-nz-JKv" secondAttribute="trailing" id="dye-WJ-Zm8"/>
+                            <constraint firstItem="ITt-og-jri" firstAttribute="top" secondItem="fYu-nz-JKv" secondAttribute="top" id="e18-X1-BcP"/>
+                            <constraint firstItem="iVg-eI-HAG" firstAttribute="leading" secondItem="fYu-nz-JKv" secondAttribute="leading" constant="16" id="gKv-DX-0l9"/>
+                            <constraint firstItem="fYu-nz-JKv" firstAttribute="trailing" secondItem="iVg-eI-HAG" secondAttribute="trailing" constant="16" id="ga4-lX-JxU"/>
+                            <constraint firstItem="iVg-eI-HAG" firstAttribute="top" secondItem="ITt-og-jri" secondAttribute="bottom" constant="20" id="rMZ-pm-o9I"/>
+                            <constraint firstItem="ITt-og-jri" firstAttribute="height" secondItem="ogg-F2-kvw" secondAttribute="height" multiplier="0.5" id="uSV-Ng-Vdr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fYu-nz-JKv"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="ITt-og-jri" id="oYX-Z7-fnI"/>
+                        <outlet property="subtitle" destination="Uay-uy-CWo" id="a5T-cW-Och"/>
+                        <outlet property="titleLabel" destination="iVg-eI-HAG" id="fD3-Q0-QL6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9kG-Vo-ADI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1317.5999999999999" y="132.26600985221674"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zcM-ff-qXc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ayV-hS-gYt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CGB-eb-CPM">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="caO-SC-qOg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2gm-TY-UBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-266" y="132"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,36 @@
+{
+    "public_art" : [
+        {
+            "title": "LA GRANDE VOILE (THE BIG SAIL)",
+            "artist": "Alexander Calder",
+            "year": "1965",
+            "image": "sail",
+            "latitude": 42.3597,
+            "longitude": -71.0889
+        },
+        {
+            "title": "AESOP'S FABLES, II",
+            "artist": "Mark Di Suvero",
+            "year": "2005",
+            "image": "fable",
+            "latitude": 42.3614,
+            "longitude": -71.0896
+        },
+        {
+            "title": "BELL TOWER FOR MIT CHAPEL",
+            "artist": "Theodore Roszak",
+            "year": "1953-55",
+            "image": "bell",
+            "latitude": 42.3583,
+            "longitude": -71.0942
+        },
+        {
+            "title": "ALCHEMIST",
+            "artist": "Jaume Plensa",
+            "year": "2010",
+            "image": "alchemist",
+            "latitude": 42.3592,
+            "longitude": -71.0940
+        },
+    ]
+}
